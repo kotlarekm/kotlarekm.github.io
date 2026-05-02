@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>ETL w Pythonie - Spotify Analyzer</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<a href="../index.html" class="back-link">← Powrót</a>
+
+<h1>ETL w Pythonie - Spotify Analyzer</h1>
+
+<p>
+Pipeline czyszczenia i walidacji danych. End-to-end data pipeline: uzupełnia dane z pliku csv przez API (Ingestion), następnie obrabia je w Pythonie (Curation), a na końcu wyświetla je za pomocą Shiny (Insight). Projekt zaliczeniowy studiów podyplomowych Analityk Danych - Data Scientists. 
+Celem aplikacji jest pobranie top 100 utworów użytkownika (dostarczone w pliku csv), wyświetlenie podstawowych wskaźników oraz porównanie ich z innymi użytkownikami lub globalnymi/ krajowymi listami top w danym roku.
+Analiza utworów odbywa się za pomocą API Spotify lastFM oraz połączenia yt_dlp oraz librosa. UI wykonane za pomocą rozwiązania Shiny for Python.
+
+<h2>Najważniejsze elementy</h2>
+<ul>
+    <li>Wczytywanie danych z csv oraz API (Spotify, lastFM)</li>
+	<li>Biblioteki do przetwarzania danych: pandas, numpy</li>
+	<li>Wykresy za pomocą seaborn oraz matplotlib</li>
+	<li>Wizualizacja dancyh za pomocą Shiny for Python</li>
+    <li>Komentarz od OpenAI</li>
+</ul>
+
+<h2>Repozytorium</h2>
+<p><a href="https://github.com/kotlarekm/SpotifyAnalizer">Link do repo</a></p>
+
+<h2>Strony dashboardu</h2>
+<img src="../assets/img/python_spotify/1_User.png" alt="Pojedynczy użytkownik" style="width:100%; max-width:900px; border-radius:8px;">
+<img src="../assets/img/python_spotify/2_Comparison.png" alt="Porównanie użytkowników" style="width:100%; max-width:900px; border-radius:8px;">
+<img src="../assets/img/python_spotify/3_recommendation.png" alt="Rekomendowane utwory" style="width:100%; max-width:900px; border-radius:8px;">
+<img src="../assets/img/python_spotify/4_compare_top.png" alt="Porównanie z listami top" style="width:100%; max-width:900px; border-radius:8px;">
+
+
+</body>
+</html>

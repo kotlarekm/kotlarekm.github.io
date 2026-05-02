@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Analiza cen mieszkań</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<a href="../index.html" class="back-link">← Powrót</a>
+
+<h1>Analiza cen mieszkań</h1>
+
+<p>
+Case study od Dane i Analizy. Analizuje ceny mieszkań w Polsce. Zaczyna się od wczytania, oczyszczenia i wstępnej analizy danych - tu pozbywam się mieszkań zagranicznych i w tym przypadku niepełnych danych. Sprawdzam outliery i przygotowuję przydatne metryki (np. cena/m2).
+Krok drugi to wizualizacja danych na wykresach. Szukamy różnych zależności, np. ceny w zależności od piętra, liczby pięter w budynku czy lokalizacji - województwa.
+Po wstępnej analizie przygotowujemy model uczenia maszynowego do wyceny nieruchomości na podstawie zadanych parametrów.
+</p>
+<h2>Najważniejsze elementy</h2>
+<ul>
+    <li>Wykresy w matplotlib oraz seaborn</li>
+	<li>Mapy w folium, przetwarzanie danych w geopandas</li>
+	<li>Uczenie maszynowe za pomocą xgboost oraz sklearn</li>
+	<li>Testowanie hipotez A/B</li>
+</ul>
+
+<h2>Repozytorium</h2>
+<p><a href="https://github.com/kotlarekm/Mieszkania">Link do repo</a></p>
+
+<h2>Strony dashboardu</h2>
+<img src="../assets/img/python_mieszkania/1_wstepnaObrobka.png"
+     alt="Wstępna obróbka danych mieszkań w Pythonie – czyszczenie, filtrowanie i przygotowanie kolumn."
+     style="width:100%; max-width:900px; border-radius:8px;">
+
+<img src="../assets/img/python_mieszkania/2_wykresy.png"
+     alt="Wizualizacje danych mieszkań w Pythonie – wykresy przedstawiające zależności między ceną, metrażem i lokalizacją."
+     style="width:100%; max-width:900px; border-radius:8px;">
+
+<img src="../assets/img/python_mieszkania/3_mapy.png"
+     alt="Mapa prezentująca rozmieszczenie ofert mieszkań wraz z cenami i lokalizacjami."
+     style="width:100%; max-width:900px; border-radius:8px;">
+
+<img src="../assets/img/python_mieszkania/4_heatmap_2.png"
+     alt="Heatmapa korelacji zmiennych w danych o mieszkaniach – zależności między ceną, powierzchnią i innymi cechami."
+     style="width:100%; max-width:900px; border-radius:8px;">
+
+<img src="../assets/img/python_mieszkania/5_cenaOdleglos.png"
+     alt="Wykres zależności ceny mieszkania od odległości do centrum miasta."
+     style="width:100%; max-width:900px; border-radius:8px;">
+
+<img src="../assets/img/python_mieszkania/6_uczenieModelu.png"
+     alt="Proces uczenia modelu regresyjnego przewidującego ceny mieszkań na podstawie cech nieruchomości."
+     style="width:100%; max-width:900px; border-radius:8px;">
+
+<img src="../assets/img/python_mieszkania/7_efekty uczenia.png"
+     alt="Wyniki uczenia modelu – porównanie wartości przewidywanych i rzeczywistych cen mieszkań."
+     style="width:100%; max-width:900px; border-radius:8px;">
+
+<img src="../assets/img/python_mieszkania/8_testowanieAB.png"
+     alt="Testowanie modelu metodą A/B – porównanie dwóch wariantów modelu predykcyjnego."
+     style="width:100%; max-width:900px; border-radius:8px;">
+
+</body>
+</html>
