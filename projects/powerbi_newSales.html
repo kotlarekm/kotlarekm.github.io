@@ -2,37 +2,66 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>#BI_NGO - Working Dog Foundation</title>
+    <title>Dashboard - Przypisanie klientów</title>
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
 
 <a href="../index.html" class="back-link">← Powrót</a>
 
-<h1>#BI_NGO - Working Dog Foundation</h1>
+<h1>Dashboard - Przypisanie klientów</h1>
 
 <p>
-Dashboard dla Working Dog Foundaton w ramach analitycznego wolontariatu #BI_NGO. 
-            Dashboard dla zarządu pokazujacy wyniki, CAGR, mapy, KPI. Dashboard zawiera strony do użycia mareketingowego - prezentacja dynamicznego rozwoju organizacji, a także wewnętrznego - przegląd finansów, wyniki w roku bieżącym.
+Dashboard wspierający decyzję przypisania klientów do nowego sprzedawcy b2b.
+            Bierze pod uwagę historyczne obroty klientów, ilość spotkań, szanse sprzedażowe
+            oraz potencjał klienta. Pokazuje na mapie wybranych klientów. 
+            Dashboard wykorzystany w realnej sytuacji, poniżej zrzuty z wygenerowanymi danymi.
+            KPI, segmentacja klientów, mapy.
 </p>
-
 <h2>Najważniejsze elementy</h2>
 <ul>
-    <li>Dostosowanie modelu danych klienta - merge, unpivot, relacje</li>
-    <li>Dynamiczne miary DAX: CAGR, YoY</li>
-    <li>Mapy</li>
+    <li>Slicer</li>
+    <li>Lokalizacja</li>
+    <li>Dobór KPI</li>
+    <li>Priorytetyzacja zadań</li>
 </ul>
 
-<h2>Strony dashboardu</h2>
-<img src="../assets/img/powerbi_bingo/1_fundacja.jpg" alt="Dashboard Power BI" style="width:100%; max-width:900px; border-radius:8px;">
-<img src="../assets/img/powerbi_bingo/2_RozwojFundacji.jpg" alt="Dashboard Power BI" style="width:100%; max-width:900px; border-radius:8px;">
-<img src="../assets/img/powerbi_bingo/3_adopsiaki.jpg" alt="Dashboard Power BI" style="width:100%; max-width:900px; border-radius:8px;">
-<img src="../assets/img/powerbi_bingo/4_wydarzenia.jpg" alt="Dashboard Power BI" style="width:100%; max-width:900px; border-radius:8px;">
-<img src="../assets/img/powerbi_bingo/5_finanse.jpg" alt="Dashboard Power BI" style="width:100%; max-width:900px; border-radius:8px;">
-<img src="../assets/img/powerbi_bingo/6_biezacy_rok.jpg" alt="Dashboard Power BI" style="width:100%; max-width:900px; border-radius:8px;">
+<h2>Metodologia pracy</h2>
+<p>
+Celem jest przypisanie klientów po sprzedawcy zmieniającym pracę (OSD) do reszty zespołu, w tym nowej pracownicy (WYA).
+W pierwszej kolejności patrzymy na obrót aktualny, żeby zabezpieczyć kupujących klientów oraz aktualne szanse sprzedażowe. 
+Decyzję można podjąć na podstawie lokalizacji i wielości obrotu (np. więksi klienci dla bardziej doświadczonych pracowników).
+Dodatkowymi czynnikami jest ilość spotkań (znak, że coś się ważnego działo u klienta), natomiast potencjał służy do priorytetyzacji dalszych działań.
+</p>
 
-<h2>Repozytorium</h2>
-<p><a href="https://github.com/kotlarekm/BI_NGO_dashboard">Link do repo</a></p>
+<p>
+    Po wybraniu klientów do przepisania uzupełniamy tabelę "przeniesienia", natomiast w zakładce "podsumowanie"
+    zobaczymy tabelę z zebranymi parametrami przekazanych klientów.
+</p>
+<p>
+    Dashboard można rozbudować o branżę klientów, żeby posegmentować ich i usprawnić przygotowania do spotkań.
+</p>
+
+<h2>Strony dashboardu</h2>
+<img src="../assets/img/powerbi_newSales/1_Obrot.jpg"
+     alt="Dashboard PowerBI - Obrót"
+     style="width:100%; max-width:900px; border-radius:8px;">
+
+<img src="../assets/img/powerbi_newSales/2_szanse.jpg"
+     alt="Dashboard PowerBI - Szanse sprzedazowe"
+     style="width:100%; max-width:900px; border-radius:8px;">
+
+ <img src="../assets/img/powerbi_newSales/3_spotkania.jpg"
+     alt="Dashboard PowerBI - spotkania"
+     style="width:100%; max-width:900px; border-radius:8px;">
+     
+<img src="../assets/img/powerbi_newSales/4_Potencjal.jpg"
+     alt="Dashboard PowerBI - "
+     style="width:100%; max-width:900px; border-radius:8px;">
+
+<img src="../assets/img/powerbi_newSales/5_summary.jpg"
+     alt="Dashboard PowerBI - podsumowanie"
+     style="width:100%; max-width:900px; border-radius:8px;">
 
 </body>
 </html>
