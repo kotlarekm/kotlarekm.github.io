@@ -12,36 +12,61 @@
 <h1>Klub języka danych - turystyka zagraniczna w Polsce</h1>
 
 <p>
-Zadanie wykonane w ramach Klubu Języka Danych, w którym realizuję co dwa miesiące zadania analizy danych. W pierwszym miesiącu wykonujemy zadanie, a w drugim wdrażamy feedback.
-Zadaie lipcowe polegało na analizie zagranicznego ruchu turystycznego w Polsce. 
+Projekt wykonany w ramach Klubu Języka Danych, w którym co dwa miesiące realizuję
+zadania analizy danych i wdrażam feedback od organizatorki i społeczności.
+Zadanie lipcowe polegało na analizie zagranicznego ruchu turystycznego w Polsce. 
 <br>
-Wykonałem dashboard eksploracyjny dla Wielkopolski przedstawiający m. in. rozkład
-turystyki w powiatach, narodowości najczęściej odwiedzających czy zależności między ilością noclegów
-turystów zagranicznych, a ilością miejsc noclegowych. Przygotowałem dwie karty skupiające się
-na wpływie pandemii covid oraz wybuchu wojny w Ukrainie.
+Wykonałem dashboard eksploracyjny dla analityków urzędu marszałkowskiego do określenia
+powiatów z największym potencjałem czy najchętniej odwiedzających nas narodowości.
+Miary KPI zmieniają się adekwatnie do zaznaczonych filtrów - dzięki temu można szybko
+porównać np. dwa powiaty. Zastosowałem również formatowanie warunkowe, aby szybko ocenić
+KPI (czy mamy trendy wzrostowe czy spadkowe). 
 </p>
 
 <h2>Najważniejsze elementy</h2>
 <ul>
-    <li>Przygotowanie danych z GUS</li>
-    <li>Podstawowe kontrolki: wykresy, KPI, slicery, </li>
-    <li>Dynamiczne miary DAX: CAGR, YoY, nachylenie regresji liniowej</li>
-    <li>Mapy i geojson</li>
-    <li>Formatowanie warunkowe</li>
+    <li>Obrobiłem dane z GUS - wyszczególniłem dane z powiatów, tak aby liczby się nie dublowały, usunąłem sumy, wyszczególniłem miasta na prawach powiatu</li>
+    <li>Rozbiłem kod teryt, aby uzyskać informację o województwie</li>
+    <li>Dodałem tabelę na temat obiektów noclegowych i powiązałem ją z tabelą liczby turystów za pomocą kodu TERYT</li>
+    <li>Model danych oparłem o strukturze gwiazdy z tabelami faktów i wymiarów, dla czytelności metryki również są w osobnych tabelach</li>
+    <li>Użyłem metryk do KPI, uwzględniających zmianę filtra</li>
+    <li>Wykorzystałem miary: CAGR (do pokazania trendu długoterminowego i odfiltrowania skoku związanego z pandemią), YoY (zmiana w ostatnim roku), czy nachylenie regresji liniowej</li>
+    <li>Wykorzystałem dostępne na licencji MIT pliki Geojson do czytelniejszego geograficznego zobrazowania różnic w regionie</li>
+    <li>Łączę mapę za pomocą nazw województwa i powiatu wg hierarchii</li>
+    <li>Zastosowałem spójną kolorystykę w całym projekcie - noclegi na niebiesko, a turyści na zielono</li>
+    <li>W porównaniu Wielkopolski na tle Polski inne województwa są wyszarzone, żeby pokierować uwagę odbiorcy</li>
+    <li>KPI mają kolor formatowany warunkowo (zielony - wzrosty, czerwony - spadki), dodatkowo tytuły wykresów są w określonych miejscach zmieniane dynamicznie</li>
 </ul>
 
+<h2>Wnioski</h2>
+<ul>
+    <li>Wielkopolska znajduje się na środku stawki, jeśli chodzi o turystów czy wzrost, choć w latach 2016-2025 
+        i w ostatnim roku ruch turystów zagranicznych przyrastał wolniej niż średnia krajowa </li>
+    <li>Najchętniej Wielkopolskę odwiedzają Niemcy, Ukraińcy (nie mówimy tu oczywiście o "turystach"),
+        Amerykanie i Brytyjczycy </li>
+    <li>Powiaty, które najlepiej rozwinęły się w ciągu ostatnich 10 lat to Słupecki i Średzki,
+        warto sprawdzić, dlaczego tak się stało </li>
+    <li>Dopiero po 4 latach udało wrócić do poziomu noclegów sprzed pandemii </li>
+    <li>Wojna w Ukrainie zwiększyła ilość gości z Ukrainy (nie można tu mówić o "turystach"), 
+        trend turystów z Rosji czy Białorusi był i tak spadkowy </li>
+
+</ul>
+
+
 <h2>Repozytorium</h2>
+<li>Pracowałem w oparciu o Git flow</li>
+<li>Repozytorium zawiera dane źródłowe, dashboard, plik w pythonie do wstępnej obróbki danych i readme</li>
 <p><a href="https://github.com/kotlarekm/KJD_Turysci">Link do repozytorium</a></p>
 
 <h2>Strony dashboardu</h2>
 <img src="../assets/img/powerbi_turysci/1_ogolny.png" alt="Przegląd turystów i noclegów" style="width:100%; max-width:900px; border-radius:8px;">
-<img src="../assets/img/powerbi_turysci/2_wielkopolska_vs_polska.png" alt="Wielkopolska vs reszta Polski" style="width:100%; max-width:900px; border-radius:8px;">
-<img src="../assets/img/powerbi_turysci/3_noclegi.png" alt="Noclegi" style="width:100%; max-width:900px; border-radius:8px;">
-<img src="../assets/img/powerbi_turysci/4_turysci.png" alt="Turyści" style="width:100%; max-width:900px; border-radius:8px;">
-<img src="../assets/img/powerbi_turysci/5_miejsca_noclegowe.png" alt="Miejsca noclegowe" style="width:100%; max-width:900px; border-radius:8px;">
-<img src="../assets/img/powerbi_turysci/6_covid.png" alt="Wpływ covid na turystykę" style="width:100%; max-width:900px; border-radius:8px;">
-<img src="../assets/img/powerbi_turysci/7_wojna.png" alt="Wpływ wojny w Ukrainie na turystykę" style="width:100%; max-width:900px; border-radius:8px;">
-<img src="../assets/img/powerbi_turysci/8_metodologia.png" alt="Metodologia" style="width:100%; max-width:900px; border-radius:8px;">
+<img src="../assets/img/powerbi_turysci/2_szczegoly.png" alt="Wielkopolska vs reszta Polski" style="width:100%; max-width:900px; border-radius:8px;">
+<img src="../assets/img/powerbi_turysci/3_wielkopolska_vs_polska.png" alt="Noclegi" style="width:100%; max-width:900px; border-radius:8px;">
+<img src="../assets/img/powerbi_turysci/4_miejsca_noclegowe.png" alt="Turyści" style="width:100%; max-width:900px; border-radius:8px;">
+<img src="../assets/img/powerbi_turysci/5_covid.png" alt="Miejsca noclegowe" style="width:100%; max-width:900px; border-radius:8px;">
+<img src="../assets/img/powerbi_turysci/6_wojna.png" alt="Wpływ covid na turystykę" style="width:100%; max-width:900px; border-radius:8px;">
+<img src="../assets/img/powerbi_turysci/7_metodologia.png" alt="Wpływ wojny w Ukrainie na turystykę" style="width:100%; max-width:900px; border-radius:8px;">
+<img src="../assets/img/powerbi_turysci/0_model_danych.png" alt="Metodologia" style="width:100%; max-width:900px; border-radius:8px;">
 
 
 </body>
