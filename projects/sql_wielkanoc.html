@@ -2,6 +2,7 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
+    <meta name="robots" content="noindex, nofollow">
     <title>Wielkanocne wyzwanie danych - Wielkanocna manufaktura</title>
     <link rel="stylesheet" href="../style.css">
 </head>
@@ -18,20 +19,33 @@ W ostatnim kroku analizowałem liczbę i odsetek zamówień opóźnionych oraz k
 </p>
 <h2>Najważniejsze elementy</h2>
 <ul>
-    <li>One Big Table (OBT)</li>
-    <li>Time Intelligence - MTD, YTDm Revenue PY - w SQL i PowerBI</li>
-    <li>Karta KPI w PowerBI</li>
-    <li>Transformacja w warstwie ODS (Operational Data Store)</li>
+    <li><b>One Big Table (OBT)</b> - używany m.in. przez zespoły Data Science lub do przykazywania
+        informacji kontrahentom, bez podawania szczegółów modelu danych. Użyłem CTE do stworzenia tabeli i później korzystałem do obliczeń.
+    </li>
+    <li><b>Time Intelligence</b> - MTD, YTD oraz Revenue PY - w SQL. Używane gdy nie mamy dashboardu, a trzeba odpowiedzieć biznesowi.
+        Użyłem funkcji okienkowych do wyliczeń oraz CTE do czytelnej struktury zapytania. </li>
+    <li><b>Karta KPI</b> i Time Intelligence w PowerBI. Wczytałem dane z bazy SQL i stworzyłem relacje między nimi.
+    Wykonałem stronę dashboardu do liczenia parametrów MTD, YTD oraz Revenue PY. Skorzystałem z tych miar do stworzenia karty KPI,
+    która pozwala biznesowi określić w kilka sekund czy sytuacja jest dobra czy nie.</li>
+    <li>Transformacja w <b>warstwie ODS</b> (Operational Data Store). Wykorzystywana do łączenia 
+    źródeł, obsługi wyjątków i budowania logiki biznesowej. Krok przed wysyłką do raportu, mogą służyć
+    jako warstwa do bieżącego raportowania. Na podstawie wykonanej warstwy ODS wykonałem obliczenia
+    statusów przesyłek, targetowych terminów dostaw czy parametru OTIF.</li>
 </ul>
 
 <h2>Repozytorium</h2>
+<p>Repozytorium zawiera:</p>
+<ul>
+<li>Zapytania SQL do powyższych zadań</li>
+<li>Stronę dashboardu w Power BI</li>
+</ul>
 <p><a href="https://github.com/kotlarekm/WielkanocneWyzwanie">Link do repozytorium</a></p>
 
 <h2>Certyfikat uczestnictwa</h2>
 <p><a href="https://certificate.certesto.com/da78a686-d926-4c60-98b0-5c5b606011b6">Link do certyfikatu</a></p>
 
 
-<h2>Strony dashboardu</h2>
+<h2>Strona dashboardu</h2>
 <img src="../assets/img/sql_wielkanoc/1_dashboard.png"
      alt="Dashboard PowerBI"
      style="width:100%; max-width:900px; border-radius:8px;">
