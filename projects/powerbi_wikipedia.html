@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex, nofollow">
+    <title>BI_NGO Wikipedia</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<div class="page-content">
+<a href="../index.html" class="back-link">← Powrót</a>
+
+<h1>Wikipedia przez 25 lat. Analiza zachowań użytkowników i najpopularniejszych tematów</h1>
+
+<p>
+Prezentacja przygotowana w ramach #BI_NGO, czyli BI dla organizacji pozarządowych (NGO). 
+Celem projektu było upowszechnienie wiedzy o Wikipedii oraz przedstawienie jej roli w Polsce 
+na przestrzeni lat. Analiza może stanowić punkt wyjścia do dyskusji o zmianach 
+w sposobie korzystania z Wikipedii i wpływie najważniejszych wydarzeń na zainteresowanie określonymi tematami.
+<br>
+Skupiłem się na pokazaniu czego szukamy w Wikipedii, kiedy i dlaczego. 
+Pokazałem, które artykuły cieszą się największym zainteresowaniem, po które kategorie najczęściej sięgamy,
+a także momenty w historii powodujące wzrost odwiedzin konkretnych artykułów.
+</p>
+
+<h2>Najważniejsze elementy</h2>
+<ul>
+    <li>
+        <strong>Narzędzia</strong><br>
+        Python i biblioteka Pandas do wstępnej obróbki. LLM do kategoryzacji. Power Query do docelowej obróbki oraz PowerPoint do storytellingu.
+    </li>
+
+    <li>
+        <strong>Zakres danych</strong><br>
+        Dla statystyk odsłon artykułów dostępne były dane z ostatnich 10 lat. W dokumentacji Wikipedii znalazłem informację o znaczącym usprawnieniu wykrywania ruchu botów, dlatego zdecydowałem się ograniczyć analizę do ostatnich 8 lat. Przykładowo artykuł „Biblia”, który znalazłby się na 2. miejscu pod względem liczby odsłon w latach 2016–2017, odnotował znaczny ruch botów błędnie sklasyfikowanych jako użytkownicy.
+    </li>
+
+    <li>
+        <strong>Kategoryzacja artykułów</strong><br>
+        Przeprowadzono kategoryzację 300 najpopularniejszych artykułów z wykorzystaniem modelu LLM. Ze względu na bardzo dużą liczbę kategorii stosowanych w Wikipedii, ich bezpośrednie wykorzystanie byłoby mało intuicyjne i utrudniałoby interpretację wyników.
+    </li>
+
+    <li>
+        <strong>Dobór wizualizacji</strong><br>
+        Wybór elementów wizualnych został oparty na charakterze prezentowanych danych. Wykorzystano karty KPI do prezentacji pojedynczych wartości, wykresy słupkowe do porównań oraz wykresy liniowe do analizy trendów w czasie.
+    </li>
+
+    <li>
+        <strong>Kolorystyka raportu</strong><br>
+        Kolorystyka raportu została oparta na identyfikacji wizualnej Wikipedii, aby zachować spójność z tematyką projektu.
+    </li>
+
+</ul>
+
+<h2>Wnioski</h2>
+<ul>
+
+<li>
+Wikipedia nie jest wyłącznie encyklopedią. To narzędzie pomagające zrozumieć świat wokół nas. 
+Użytkownicy sięgają po nią zarówno w celu pogłębiania wiedzy, jak i zrozumienia wydarzeń wywołujących smutek, strach, ciekawość czy ekscytację.
+</li>
+
+<li>
+Na wzrost liczby wyświetleń artykułów wpływają wydarzenia wywołujące silne emocje, zarówno tragiczne, jak i pozytywne.
+</li>
+
+<li>
+Doniesienia medialne, premiery filmów, seriali oraz innych produkcji popkultury istotnie zwiększają zainteresowanie powiązanymi artykułami.
+</li>
+
+<li>
+Nagłe wzrosty liczby wyświetleń, które nie mają oczywistego uzasadnienia w wydarzeniach zewnętrznych, mogą wskazywać na błędy w klasyfikacji ruchu i stanowić punkt wyjścia do dalszej weryfikacji jakości danych.   
+</li>
+
+</ul>
+
+<h2>Strony prezentacji</h2>
+
+<img src="../assets/img/powerbi_wikipedia/Slajd1.PNG" alt="Strona tytułowa" style="width:100%; max-width:900px; border-radius:8px;">
+<img src="../assets/img/powerbi_wikipedia/Slajd2.PNG" alt="Ludzie interesują się ludźmi" style="width:100%; max-width:900px; border-radius:8px;">
+<img src="../assets/img/powerbi_wikipedia/Slajd3.PNG" alt="Czego szukamy najczęściej" style="width:100%; max-width:900px; border-radius:8px;">
+<img src="../assets/img/powerbi_wikipedia/Slajd4.PNG" alt="Kiedy szukamy informacji" style="width:100%; max-width:900px; border-radius:8px;">
+<img src="../assets/img/powerbi_wikipedia/Slajd5.PNG" alt="Elżbieta II" style="width:100%; max-width:900px; border-radius:8px;">
+<img src="../assets/img/powerbi_wikipedia/Slajd6.PNG" alt="Iga Świątek" style="width:100%; max-width:900px; border-radius:8px;">
+<img src="../assets/img/powerbi_wikipedia/Slajd7.PNG" alt="Freddie Mercury" style="width:100%; max-width:900px; border-radius:8px;">
+<img src="../assets/img/powerbi_wikipedia/Slajd8.PNG" alt="Piłka nożna" style="width:100%; max-width:900px; border-radius:8px;">
+<img src="../assets/img/powerbi_wikipedia/Slajd9.PNG" alt="Dlaczego otwieramy Wikipedię" style="width:100%; max-width:900px; border-radius:8px;">
+<img src="../assets/img/powerbi_wikipedia/Slajd11.PNG" alt="Źródła" style="width:100%; max-width:900px; border-radius:8px;">
+<img src="../assets/img/powerbi_wikipedia/Slajd12.PNG" alt="Przedłużanie życia" style="width:100%; max-width:900px; border-radius:8px;">
+
+</div>
+</body>
+</html>
